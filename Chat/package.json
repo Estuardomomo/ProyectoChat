@@ -1,0 +1,16 @@
+{
+  "name": "chat",
+  "version": "1.0.0",
+  "description": "Chat separado del login",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "author": "Diego",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.2",
+    "mongodb": "^2.2.33",
+    "socket.io": "^2.0.4"
+  }
+}
