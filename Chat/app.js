@@ -33,7 +33,7 @@ mongo.connect('mongodb://127.0.0.1/mongochat', function(err,db){
             let message = data.message;
 
             //check for name and message
-            if(name == "" || message =="")
+            if(name === "" || message ==="")
                 sendStatus('Enter a name or a message.')
             else
                 chat.insert({name: name, message:message}, function(){

@@ -12,21 +12,22 @@
     <body>
             <div class="container">
                 <div class="row">
-                    <div class="col-md-6 offset-md-3 col-sm-12 ">
+                    <div class="col-md-7 offset-md-2 col-ms -12 ">
                         <h1 class="text-center">
                             MongoChat
                         </h1>
+                        <br>
                         <div id="status"></div>
                         <div id= "chat">
                             <input type="text" id = "username" class="form-control" placeholder="Enter name">
                             <br>
                             <div class="card">
-                                <div id="messages" class="card-block">
+                                <div id="messages" class="card-block" style="overflow:scroll">
 
                                 </div>
                             </div>
                             <br>
-                            <textarea id="textarea" class="form-control" placeholder="Enter message"></textarea>
+                            <textarea id="textarea" class="form-control" placeholder="Enter message" ></textarea>
                         </div>
                     </div>
 
@@ -49,7 +50,7 @@
                     var statusDefault = status.textContent;
 
                     var setStatus = function(s){
-                        status.textContent = s;
+                        this.status.textContent = s;
 
 
                         if(s !== statusDefault)
@@ -86,11 +87,13 @@
                     //handle input
                     textarea.addEventListener('keydown', function(event){
                         if(event.which === 13 &&  event.shiftKey == false){
-                            socket.emit('input',{name:username.value,
-                        message:textarea.value});
-
+                            socket.emit('input',{
+                                name:username.value,
+                                message:textarea.value
+                            });
+                            textarea.value="    ";
                         }
-                        event.preventDefault();
+                        //  event.preventDefault();
                     });
 
                 })();
