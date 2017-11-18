@@ -1,6 +1,6 @@
 <html>
     <head>
-        <title>IO CHAT</title>
+        <title>WatApp CHAT</title>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
         <script src="http://code.jquery.com/jquery-latest.min.js"></script>
         <script src="/socket.io/socket.io.js"></script>
@@ -72,6 +72,21 @@
                 $chat.append('<div class="well"><strong>'+data.user+'</strong>: '+data.msg+'</div>')
             });
 
+            socket.on('output',function(data){
+                        console.log(data);
+                        if(data.length){
+                            for(var x = 0; x < data.length; x++){
+                                //buidl out message
+                                var message = document.createElement('div');
+                                message.setAttribute('class', 'chat-message');
+                                message.textContent = data[x].name+": "+data[x].message;
+                                messages.appendChild(message);
+                                messages.insertBefore(message,messages.firstChild);
+                            }
+                        }
+                    });
+
+                    
             $userForm.submit(function(e){
                 e.preventDefault();
                 socket.emit('new user',$username.val(),function(data){
