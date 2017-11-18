@@ -1,0 +1,27 @@
+{
+  "name": "login",
+  "version": "1.0.0",
+  "private": true,
+  "main": "app.js",
+  "scripts": {
+    "start": "node ./bin/www",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Diego/Estuardo",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "~1.18.2",
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.6.9",
+    "edge": "^7.10.1",
+    "express": "^4.16.2",
+    "express-generator": "^4.15.5",
+    "express-session": "^1.15.6",
+    "hjs": "*",
+    "mongo": "^0.1.0",
+    "mongoose": "^4.13.3",
+    "morgan": "~1.9.0",
+    "serve-favicon": "~2.4.5",
+    "socket.io": "^2.0.4"
+  }
+}

@@ -1,0 +1,2 @@
+<h3> Felicidades se han registrado tus datos, ¡Inicia sesión! <h3>
+<input type="button" value="Regresar" onclick="window.location.href = '/'">

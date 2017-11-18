@@ -1,0 +1,26 @@
+<head>
+    <title> Inicio </title>
+  </head>
+  <body>
+    <h1>PROYECTO CHAT</h1>
+    <form action= '/login' method="POST">
+      <fieldset>
+        <legend> SIGN IN</legend>
+        usuario <br>
+        <input type="text" name="u" id="u"><br>
+        contraseña<br>
+        <input type= "text" name="c" id="c">
+        <input type="submit" id="btnlogin" value="Sign in">
+      </fieldset>
+    </form>
+    <form action= '/register' method="POST">
+      <fieldset>
+        <legend> SIGN UP</legend>
+        usuario <br>
+        <input type="text" name="nu" id="nu"><br>
+        contraseña<br>
+        <input type= "text" name="nc" id="nc">
+        <input type="submit" id="btnregistro" value="Sign up">
+      </fieldset>
+    </form>
+  </body>
